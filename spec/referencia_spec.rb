@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'referencia'
 
 describe Referencia do
   it 'has a version number' do
