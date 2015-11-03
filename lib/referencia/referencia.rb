@@ -1,17 +1,15 @@
-#require "referencia/version"
-
 class Referencia
     
     attr_reader :autor, :titulo, :serie, :editorial, :edicion, :fecha, :isbn
     
     def initialize(autor, titulo, serie, editorial, edicion, fecha, isbn)
-        @autor = autor
-        @titulo = titulo
-        @serie = serie
-        @editorial = editorial
-        @edicion = edicion
-        @fecha = fecha
-        @isbn = isbn
+        @autor = autor;
+        @titulo = titulo;
+        @serie = serie;
+        @editorial = editorial;
+        @edicion = edicion;
+        @fecha = fecha;
+        @isbn = isbn;
     end
     
     def to_s
@@ -20,3 +18,4 @@ class Referencia
     
     
 end
+    

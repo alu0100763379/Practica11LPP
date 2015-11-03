@@ -2,11 +2,16 @@ require 'spec_helper'
 require 'referencia'
 
 describe Referencia do
-  it 'has a version number' do
-    expect(Referencia::VERSION).not_to be nil
+  
+  describe 'Referencia' do
+      before :each do
+        @referencia = Referencia.new("Hector","La sala de informatica","443","Alpachino","Primera","2015","20")
+      end
   end
-
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe 'prueba' do
+    it "Constructor" do
+      expect(@referencia.autor).to eq("Hector")
+    end
   end
+  
 end
