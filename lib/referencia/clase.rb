@@ -1,6 +1,6 @@
 class Bibliografia
     
-    attr_accessor :autor, :titulo, :serie, :editorial, :edicion, :fecha, :isbn
+    #attr_accessor :autor, :titulo, :serie, :editorial, :edicion, :fecha, :isbn
     
     def initialize(autor, titulo, serie, editorial, edicion, fecha, isbn)
         @autor = autor
@@ -16,7 +16,7 @@ class Bibliografia
         "(#{@autor},#{@titulo},#{@serie},#{@editorial},#{@edicion},#{@fecha},#{@isbn})"
     end
     
-    def autore
+    def autor
       @autor
     end
   
