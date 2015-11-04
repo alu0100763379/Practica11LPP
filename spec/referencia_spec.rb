@@ -4,9 +4,9 @@ require 'referencia'
 describe Referencia do
   
 
-      before :each do
-        @referencia = Bibliografia.new(["Hector","Alejandro"],"La sala de informatica","443","Alpachino","Primera","2015","20")
-      end
+  before :each do
+    @referencia = Bibliografia.new(["Hector","Alejandro"],"La sala de informatica","443","Alpachino","Primera","2015","20")
+  end
 
   describe 'Definicion de espectativas y pruebas' do
     it "Constructor: se ha creado el objeto" do
@@ -38,6 +38,37 @@ describe Referencia do
       @referencia.isbn.length.should_not be 0
     end
     
+    it "Existe un método para obtener el listado de autores" do
+      @referencia.respond_to?(:autor).should be true
+    end
+    
+    it "Existe un método para obtener el título" do
+      @referencia.respond_to?(:titulo).should be true
+    end
+    
+    it "Existe un método para obtener la serie" do
+      @referencia.respond_to?(:serie).should be true
+    end
+    
+    it "Existe un método para obtener la editorial" do
+      @referencia.respond_to?(:editorial).should be true
+    end
+    
+    it "Existe un método para obtener la edición" do
+      @referencia.respond_to?(:edicion).should be true
+    end
+    
+    it "Existe un método para obtener la fecha" do
+      @referencia.respond_to?(:fecha).should be true
+    end
+    
+    it "Existe un método para obtener la isbn" do
+      @referencia.respond_to?(:isbn).should be true
+    end
+    
+    it "Existe un método para obtener la referencia formateada" do
+      @referencia.respond_to?(:to_s).should be true
+    end
   end
 
 end
