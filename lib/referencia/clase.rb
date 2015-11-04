@@ -16,5 +16,34 @@ class Bibliografia
         "(#{@autor},#{@titulo},#{@serie},#{@editorial},#{@edicion},#{@fecha},#{@isbn})"
     end
     
+    def autore
+      @autor
+    end
+  
+  def titulo
+      @titulo
+  end
+  
+  def serie
+      @serie
+  end
+  
+  def editorial
+      @editorial
+  end
+  
+  def edicion
+      @edicion
+  end
+  
+  def fecha
+      @fecha
+  end
+  
+  def isbn
+      @isbn
+  end
+    
+    
 end
     
