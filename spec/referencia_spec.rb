@@ -14,7 +14,7 @@ describe Referencia do
     end
     
     it "Debe existir uno o mas autores" do
-      @referencia.autor.length.should_not be 0
+      expect(@referencia.autor.length).not_to be 0
     end
     
     it "Debe existir un titulo" do
@@ -35,7 +35,7 @@ describe Referencia do
       expect(@referencia.fecha).to eq("2015")
     end
     it "Debe existir uno o mas numeros isnb" do
-      @referencia.isbn.length.should_not be 0
+       expect(@referencia.isbn.length).not_to be 0
     end
     
     it "Existe un método para obtener el listado de autores" do
