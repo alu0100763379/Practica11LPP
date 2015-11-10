@@ -50,4 +50,11 @@ describe Referencia do
     expect(@n2.next_node).to eq(@n1)
   end
   
+  it "Se extrae el primer elemento de la lista." do
+    @lista.add(@n1)
+    @lista.add(@n2)
+    @lista.remove
+    expect(@lista.head).to eq(@n1)
+  end
+    
 end
