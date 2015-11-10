@@ -1,6 +1,6 @@
 #Clase para representar la Lista
 
-Node = Struct.new(:value, :next_node)
+Nodo = Struct.new(:value, :next_node)
 
 class Lista
     

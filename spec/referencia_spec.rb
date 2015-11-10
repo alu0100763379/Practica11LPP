@@ -1,74 +1,26 @@
 require 'spec_helper'
-#require 'referencia'
 
 describe Referencia do
   
 
   before :each do
-    @referencia = Bibliografia.new(["Hector","Alejandro"],"La sala de informatica","443","Alpachino","Primera","2015","20")
+    
+        @lista = Lista.new()
+        
+        @r1 = Bibliografia.new(["Dave Thomas", "Andy Hunt", "Chad Fowler"], "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers Guide", "The Facets of Ruby", "Pragmatic Bookshelf", "4 edition", "July 7, 2013",["ISBN-13: 978-1937785499", "ISBN-10: 1937785491"])
+        @r2 = Bibliografia.new(["Scott Chacon"], "Pro Git 2009th Edition", "Pro", "Apress", "2009 edition", "August 27, 2009", ["ISBN-13: 978-1430218333", "ISBN-10: 1430218339"])
+        @r3 = Bibliografia.new(["David Flanagan", "Yukihiro Matsumoto"], "The Ruby Programming Language", "Serie", "O’Reilly Media", " 1 edition", "February 4, 2008", ["ISBN-10: 0596516177", "ISBN-13: 978-0596516178"])
+        @r4 = Bibliografia.new(["David Chelimsky", "Dave Astels", " Bryan Helmkamp", "Dan North", "Zach Dennis", "Aslak Hellesoy"], "The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends", "The Facets of Ruby", "Pragmatic Bookshelf", "1 edition", "December 25, 2010", ["ISBN-10: 1934356379", "ISBN-13: 978-1934356371",])
+        @r5 = Bibliografia.new(["Richard E. Silverman"], "Git Pocket Guide", "Serie", "O’Reilly Media", "1 edition",  "August 2, 2013", ["ISBN-10: 1449325866", "ISBN-13: 978-1449325862"])    
+        
+        @n1 = Nodo.new(@r1)
+        @n2 = Nodo.new(@r2)
+        @n3 = Nodo.new(@r3)
+        @n4 = Nodo.new(@r4)
+        @n5 = Nodo.new(@r5)
+        
   end
 
-  describe 'Definicion de espectativas y pruebas' do
-    it "Constructor: se ha creado el objeto" do
-      @referencia.should be_an_instance_of Bibliografia
-    end
-    
-    it "Debe existir uno o mas autores" do
-      expect(@referencia.autor.length).not_to be 0
-    end
-    
-    it "Debe existir un titulo" do
-      expect(@referencia.titulo).to eq("La sala de informatica")
-    end
-    
-    it "Debe existir una serie" do
-      expect(@referencia.serie).to eq("443")
-    end
-    
-    it "Debe existir una editorial" do
-      expect(@referencia.editorial).to eq("Alpachino")
-    end
-    it "Debe existir un numero de edicion" do
-      expect(@referencia.edicion).to eq("Primera")
-    end
-    it "Debe existir una fecha de publicacion" do
-      expect(@referencia.fecha).to eq("2015")
-    end
-    it "Debe existir uno o mas numeros isnb" do
-       expect(@referencia.isbn.length).not_to be 0
-    end
-    
-    it "Existe un método para obtener el listado de autores" do
-      @referencia.respond_to?(:autor).should be true
-    end
-    
-    it "Existe un método para obtener el título" do
-      @referencia.respond_to?(:titulo).should be true
-    end
-    
-    it "Existe un método para obtener la serie" do
-      @referencia.respond_to?(:serie).should be true
-    end
-    
-    it "Existe un método para obtener la editorial" do
-      @referencia.respond_to?(:editorial).should be true
-    end
-    
-    it "Existe un método para obtener la edición" do
-      @referencia.respond_to?(:edicion).should be true
-    end
-    
-    it "Existe un método para obtener la fecha" do
-      @referencia.respond_to?(:fecha).should be true
-    end
-    
-    it "Existe un método para obtener la isbn" do
-      @referencia.respond_to?(:isbn).should be true
-    end
-    
-    it "Existe un método para obtener la referencia formateada" do
-      @referencia.respond_to?(:to_s).should be true
-    end
-  end
+
 
 end
