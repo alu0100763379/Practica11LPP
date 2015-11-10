@@ -43,4 +43,11 @@ describe Referencia do
     expect(@lista.head).to eq(@n3)
   end
   
+  it "Debe existir un Nodo de la lista con sus datos y su siguiente" do
+    @lista.add(@n1)
+    @lista.add(@n2)
+    expect(@n2.value).to eq(@r2)
+    expect(@n2.next_node).to eq(@n1)
+  end
+  
 end
