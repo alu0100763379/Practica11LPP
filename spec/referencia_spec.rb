@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'referencia'
+#require 'referencia'
 
 describe Referencia do
   
