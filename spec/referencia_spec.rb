@@ -32,4 +32,15 @@ describe Referencia do
     expect(@n2.value).to eq(@r2)
   end
   
+  it "Se pueden insertar varios elementos." do
+    @lista.add(@n3)
+    @lista.add(@n4)
+    @lista.add(@n5)
+    expect(@lista.head).to eq(@n5)
+    @lista.remove
+    expect(@lista.head).to eq(@n4)
+    @lista.remove
+    expect(@lista.head).to eq(@n3)
+  end
+  
 end
