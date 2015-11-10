@@ -21,6 +21,9 @@ describe Referencia do
         
   end
 
-
+  it "Debe existir una Lista con su cabeza" do
+  	@lista.add(@n1)
+  	expect(@lista.head).to eq(@n1)
+  end
 
 end
