@@ -50,7 +50,11 @@ describe Referencia do
   end
   
   it "Se extrae el último elemento de la lista." do
-
+    @lista.add_primer_nodo(@n1)
+    @lista.add_final(@n5)
+    @lista.borrar_final
+    expect(@lista.head).to eq(@n1)
+    expect(@n1.value).to eq(@r1)
   end
     
 end
