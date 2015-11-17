@@ -22,39 +22,27 @@ describe Referencia do
   end
 
   it "La lista debe tener su cabeza" do
-  	@lista.add(@n1)
-  	expect(@lista.head).to eq(@n1)
+
+  end
+  
+  it "La lista debe tener su cola" do
+
   end
 
-  it "Debe poderse insertar un elemento en la lista" do
-    @lista.add(@n2)
-    expect(@lista.head).to eq(@n2)
-    expect(@n2.value).to eq(@r2)
+  it "Debe poderse insertar un elemento en la lista por el principio" do
+
   end
   
-  it "Se pueden insertar varios elementos." do
-    @lista.add(@n3)
-    @lista.add(@n4)
-    @lista.add(@n5)
-    expect(@lista.head).to eq(@n5)
-    @lista.remove
-    expect(@lista.head).to eq(@n4)
-    @lista.remove
-    expect(@lista.head).to eq(@n3)
-  end
-  
-  it "Debe existir un Nodo de la lista con sus datos y su siguiente" do
-    @lista.add(@n1)
-    @lista.add(@n2)
-    expect(@n2.value).to eq(@r2)
-    expect(@n2.next_node).to eq(@n1)
+  it "Debe poderse insertar un elemento en la lista por el final" do
+
   end
   
   it "Se extrae el primer elemento de la lista." do
-    @lista.add(@n1)
-    @lista.add(@n2)
-    @lista.remove
-    expect(@lista.head).to eq(@n1)
+
+  end
+  
+  it "Se extrae el último elemento de la lista." do
+
   end
     
 end
