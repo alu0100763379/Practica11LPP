@@ -21,12 +21,10 @@ describe Referencia do
         
   end
 
-  it "La lista debe tener su cabeza" do
-
-  end
-  
-  it "La lista debe tener su cola" do
-
+  it "La lista debe tener su cabeza y su cola" do
+    @lista.add_primer_nodo(@n1)
+  	expect(@lista.head).to eq(@n1)
+  	expect(@lista.tail).to eq(@n1)
   end
 
   it "Debe poderse insertar un elemento en la lista por el principio" do
