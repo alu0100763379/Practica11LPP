@@ -28,11 +28,17 @@ describe Referencia do
   end
 
   it "Debe poderse insertar un elemento en la lista por el principio" do
-
+    @lista.add_primer_nodo(@n1)
+    @lista.add_principio(@n2)
+    expect(@lista.head).to eq(@n2)
+    expect(@n2.value).to eq(@r2)
   end
   
   it "Debe poderse insertar un elemento en la lista por el final" do
-
+    @lista.add_primer_nodo(@n1)
+    @lista.add_final(@n3)
+    expect(@lista.tail).to eq(@n3)
+    expect(@n3.value).to eq(@r3)
   end
   
   it "Se extrae el primer elemento de la lista." do
