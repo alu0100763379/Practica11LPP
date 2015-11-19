@@ -52,5 +52,12 @@ describe Referencia do
     expect(@lista.head).to eq(@n1)
     expect(@n1.value).to eq(@r1)
   end
-    
+  
+  it "Expectativa de herencia" do
+    expect(@r2.is_a?Bibliografia).to eq(true)
+  end
+  
+  it "Instancia" do
+    expect(@r3.instance_of?Electronico).to eq(true)
+  end
 end
