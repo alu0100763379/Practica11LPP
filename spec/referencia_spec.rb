@@ -45,7 +45,7 @@ describe Referencia do
     expect(@n1.value).to eq(@r1)
   end
   
-  it "Se extrae el último elemento de la lista." do
+  it "Se extrae el ultimo elemento de la lista." do
     @lista.add_primer_nodo(@n1)
     @lista.add_final(@n3)
     @lista.borrar_final
