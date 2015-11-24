@@ -10,8 +10,12 @@ class Bibliografia
         @fecha = fecha
     end
     
-    def <=>
-    
+    def <=> (other)
+        if @autor == other.autor
+            @titulo <=> other.titulo
+        else
+            @autor <=> other.autor
+        end
     end
     
 end
