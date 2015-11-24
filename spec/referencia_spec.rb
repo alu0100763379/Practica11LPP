@@ -93,7 +93,7 @@ describe Referencia do
     before :each do
         @r1 = Revista.new(["Scott Chacon"], "Pro Git 2009th Edition", "August 27, 2009", ["ISSN-13: 978-1430218333", "ISSN-10: 1430218339"])
         @r2 = Electronico.new(["David Flanagan"], "The Ruby Programming Language", "February 4, 2008", "http://0596516177IS978_0596516178")
-        @r3 = Libro.new(["David Flanagan"], "Git Pocket Guide", "Serie", "O’Reilly Media", "1 edition",  "August 2, 2013", ["ISBN-10: 1449325866", "ISBN-13: 978-1449325862"])    
+        @r3 = Libro.new(["David Flanagan"], "Git Pocket Guide", "Serie", "Reilly Media", "1 edition",  "August 2, 2013", ["ISBN-10: 1449325866", "ISBN-13: 978-1449325862"])    
    
     end
     
