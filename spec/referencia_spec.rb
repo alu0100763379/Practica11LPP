@@ -18,39 +18,35 @@ describe Referencia do
   end
 
   it "La lista debe tener su cabeza y su cola" do
-    @lista.add_primer_nodo(@n1)
+    @lista.add_principio(@r1)
   	expect(@lista.head).to eq(@n1)
   	expect(@lista.tail).to eq(@n1)
   end
 
   it "Debe poderse insertar un elemento en la lista por el principio" do
-    @lista.add_primer_nodo(@n1)
-    @lista.add_principio(@n2)
-    expect(@lista.head).to eq(@n2)
-    expect(@n2.value).to eq(@r2)
+    @lista.add_principio(@r1)
+    @lista.add_principio(@r2)
+    expect(@lista.head.value).to eq(@r2)
   end
   
   it "Debe poderse insertar un elemento en la lista por el final" do
-    @lista.add_primer_nodo(@n1)
-    @lista.add_final(@n3)
-    expect(@lista.tail).to eq(@n3)
-    expect(@n3.value).to eq(@r3)
+    @lista.add_principio(@r1)
+    @lista.add_final(@r3)
+    expect(@lista.tail.value).to eq(@r3)
   end
   
   it "Se extrae el primer elemento de la lista." do
-    @lista.add_primer_nodo(@n1)
-    @lista.add_principio(@n2)
+    @lista.add_principio(@r1)
+    @lista.add_principio(@r2)
     @lista.borrar_principio
-    expect(@lista.head).to eq(@n1)
-    expect(@n1.value).to eq(@r1)
+    expect(@lista.head.value).to eq(@r1)
   end
   
   it "Se extrae el ultimo elemento de la lista." do
-    @lista.add_primer_nodo(@n1)
-    @lista.add_final(@n3)
+    @lista.add_principio(@r1)
+    @lista.add_final(@r3)
     @lista.borrar_final
-    expect(@lista.head).to eq(@n1)
-    expect(@n1.value).to eq(@r1)
+    expect(@lista.head.value).to eq(@r1)
   end
   
   it "Expectativa de herencia" do
@@ -60,4 +56,20 @@ describe Referencia do
   it "Instancia" do
     expect(@r3.instance_of?Electronico).to eq(true)
   end
+
+  context "Lista enumerable" do
+    before :each do
+      @lista2 = Lista.new()
+      @lista2.add_muchos([1,2,6,9,4,3,5,8,7])
+    end
+    
+    it "Comprobando max" do
+      expect(@lista2.max).to eq(9)
+    end
+    
+    it "Comprobando min" do
+      expect(@lista2.min).to eq(1)
+    end
+  end
+
 end

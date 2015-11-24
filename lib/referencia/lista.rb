@@ -4,24 +4,27 @@ Nodo = Struct.new(:value, :next_node, :prev_node)
 
 class Lista
     
+   include Enumerable
+
    attr_accessor :head, :value, :next_node, :tail, :prev_node
 
     def initialize
         @head = Nodo.new(nil)
-        @tail = @head
+        @head = nil
+        @tail = Nodo.new(nil)
+        @tail = nil
     end
-    
-    def add_primer_nodo(nodo)
-        nodo.next_node = @head
-        nodo.prev_node = @tail
-        @head = nodo
-        @tail = nodo
-    end
-    
+  
     def add_principio(nodo)
-        nodo.next_node = @head
-        @head.prev_node = nodo
-        @head = nodo
+        aux = Nodo.new(nodo, nil, nil)
+        if (@head == nil && @tail == nil)
+            @head = aux
+            @tail = aux
+        else
+            aux.next_node = @head
+            @head.prev_node = aux
+            @head = aux
+        end
     end
 
     def borrar_principio
@@ -35,9 +38,24 @@ class Lista
     end
     
     def add_final(nodo)
-        nodo.prev_node = @tail
-        @tail.next_node = nodo
-        @tail = nodo
+        aux = Nodo.new(nodo, nil, nil)
+        aux.prev_node = @tail
+        @tail.next_node = aux
+        @tail = aux
+    end
+    
+    def each
+        i = @head
+        while (i != nil) 
+            yield i.value
+            i = i.next_node
+        end
+    end
+
+    def add_muchos(nodo)
+        nodo.each do |num| 
+            self.add_principio(num)
+        end
     end
     
 end

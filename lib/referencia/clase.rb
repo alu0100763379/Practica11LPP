@@ -1,5 +1,7 @@
 class Bibliografia
     
+    include Comparable
+    
     attr_accessor :autor, :titulo, :fecha
     
     def initialize(autor, titulo, fecha)
@@ -7,7 +9,11 @@ class Bibliografia
         @titulo = titulo
         @fecha = fecha
     end
-
+    
+    def <=>
+    
+    end
+    
 end
 
 class Libro < Bibliografia
@@ -42,4 +48,3 @@ class Electronico < Bibliografia
         @url = url
     end
 end
-    
