@@ -63,13 +63,30 @@ describe Referencia do
       @lista2.add_muchos([1,2,6,9,4,3,5,8,7])
     end
     
-    it "Comprobando max" do
+    it "Comprobando que se han insertado bien todos los elementos en la lista" do
+      expect(@lista2.all?).to eq(true)
+    end
+    
+    it "Comprobando que se ha insertado bien al menos un elemento en la lista" do
+      expect(@lista2.any?).to eq(true)
+    end
+    
+    it "Comprobando el elemento maximo de la lista" do
       expect(@lista2.max).to eq(9)
     end
     
-    it "Comprobando min" do
+    it "Comprobando el elemento minimo de la lista" do
       expect(@lista2.min).to eq(1)
     end
+    
+    it "Contando elementos de la lista" do
+      expect(@lista2.count).to eq(9)
+    end
+    
+    it "Ordenando elementos de la lista" do
+      expect(@lista2.sort).to eq([1,2,3,4,5,6,7,8,9])
+    end
+    
   end
 
 end
