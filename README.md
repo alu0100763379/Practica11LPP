@@ -40,5 +40,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 #Travis
 [![Build Status](https://travis-ci.org/alu0100763379/LPPP9.svg)](https://travis-ci.org/alu0100763379/LPPP9)
+
 #Coveralls
 [![Coverage Status](https://coveralls.io/repos/alu0100763379/LPPpractica10/badge.svg?branch=master&service=github)](https://coveralls.io/github/alu0100763379/LPPpractica10?branch=master)
