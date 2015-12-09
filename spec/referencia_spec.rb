@@ -59,8 +59,11 @@ describe Referencia do
 
   context "Lista enumerable" do
     before :each do
+       @r1 = Revista.new(["Scott Chacon"], "Pro Git 2009th Edition", "August 27, 2009", ["ISSN-13: 978-1430218333", "ISSN-10: 1430218339"])
+       @r2 = Electronico.new(["David Flanagan"], "The Ruby Programming Language", "February 4, 2008", "http://0596516177IS978_0596516178")
+       @r3 = Libro.new(["David Flanagan"], "Git Pocket Guide", "Serie", "Reilly Media", "1 edition",  "August 2, 2013", ["ISBN-10: 1449325866", "ISBN-13: 978-1449325862"])
       @lista2 = Lista.new()
-      @lista2.add_muchos([1,2,6,9,4,3,5,8,7])
+      @lista2.add_muchos([@r1,@r2,@r3])
     end
     
     it "Comprobando que se han insertado bien todos los elementos en la lista" do
@@ -72,19 +75,19 @@ describe Referencia do
     end
     
     it "Comprobando el elemento maximo de la lista" do
-      expect(@lista2.max).to eq(9)
+      expect(@lista2.max).to eq(@r1)
     end
     
     it "Comprobando el elemento minimo de la lista" do
-      expect(@lista2.min).to eq(1)
+      expect(@lista2.min).to eq(@r3)
     end
     
     it "Contando elementos de la lista" do
-      expect(@lista2.count).to eq(9)
+      expect(@lista2.count).to eq(3)
     end
     
     it "Ordenando elementos de la lista" do
-      expect(@lista2.sort).to eq([1,2,3,4,5,6,7,8,9])
+      expect(@lista2.sort).to eq([@r3,@r2,@r1])
     end
     
   end
@@ -115,4 +118,16 @@ describe Referencia do
     
   end
 
+  describe 'APA' do
+    
+    before :each do
+        @r1 = APA.new(["Scott Chacon"], "Pro Git 2009th Edition", "August 27, 2009", ["ISSN-13: 978-1430218333", "ISSN-10: 1430218339"])
+        @r2 = Electronico.new(["David Flanagan"], "The Ruby Programming Language", "February 4, 2008", "http://0596516177IS978_0596516178")
+        @r3 = Libro.new(["David Flanagan"], "Git Pocket Guide", "Serie", "Reilly Media", "1 edition",  "August 2, 2013", ["ISBN-10: 1449325866", "ISBN-13: 978-1449325862"])    
+   
+    end
+
+	end
 end
+
+	

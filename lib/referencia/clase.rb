@@ -52,3 +52,14 @@ class Electronico < Bibliografia
         @url = url
     end
 end
+
+class APA < Bibliografia
+    
+    attr_accessor :apellidos
+    
+	def initialize(autor,titulo,fecha,apellidos)
+        super(autor, titulo, fecha)
+        @apellidos = apellidos
+	end
+	
+end
