@@ -32,11 +32,23 @@ class Libro < Bibliografia
     
     attr_accessor :serie, :editorial, :edicion, :isbn
     
-    def initialize(autor, titulo, fecha, serie, editorial, edicion, isbn)
-        super(autor, titulo, fecha)
+    def initialize (titulo, &bloque)
+        super(titulo)
+        instance_eval &bloque if block_given?
+    end
+    def nombre_serie(serie)
         @serie = serie
+    end
+ 
+    def nombre_editorial(editorial)
         @editorial = editorial
+    end
+ 
+    def numero_edicion(edicion)
         @edicion = edicion
+    end
+    
+    def identificador(isbn)
         @isbn = isbn
     end
 end

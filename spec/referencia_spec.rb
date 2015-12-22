@@ -26,10 +26,10 @@ describe Libro do
     @libro = Libro.new('Programacion y Git') do
       autores 'Carmen Trujillo'
       fecha_publicacion 'Junio 21, 2014'
-      serie 'Programacion 1'
-     editorial 'Almac'
-      edicion 'Tercera'
-      isbn '278-553'
+      nombre_serie 'Programacion 1'
+      nombre_editorial 'Almac'
+      numero_edicion 'Tercera'
+      identificador '278-553'
     end
   end
   
