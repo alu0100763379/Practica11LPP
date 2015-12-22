@@ -71,18 +71,18 @@ end
 describe Revista do
   before :all do
     @revista = Revista.new('Programacion') do
-      autores 'Elsa Eposito'
+      autores 'Elsa Exposito'
       fecha_publicacion 'Marzo 12, 2015'
       identificador '825-611'
     end
   end
   
   it "Comprobar que es instancia de Revista" do
-      expect(@libro.instance_of?(Revista)).to eq(true)
+      expect(@revista.instance_of?(Revista)).to eq(true)
   end
   
   it "Comprobar que es hijo de Bibliografia" do
-    expect(@libro.is_a?(Bibliografia)).to eq(true)
+    expect(@revista.is_a?(Bibliografia)).to eq(true)
   end
   
   it "Comprobar Fecha de Publicacion" do
@@ -90,7 +90,7 @@ describe Revista do
   end
   
   it "Comprobar Autor" do
-    expect(@revista.autor).to eq(['Elsa Eposito'])
+    expect(@revista.autor).to eq(['Elsa Exposito'])
   end
   
   it "Comprobar Titulo" do

@@ -57,9 +57,13 @@ class Revista < Bibliografia
     
     attr_accessor :issn
     
-    def initialize(autor, titulo, fecha, isnn)
-        super(autor, titulo, fecha)
-        @isnn = issn
+    def initialize (titulo, &bloque)
+        super(titulo)
+        instance_eval &bloque if block_given?
+    end
+    
+    def identificador(issn)
+        @issn = issn
     end
 end
 
