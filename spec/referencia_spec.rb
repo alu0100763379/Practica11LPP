@@ -67,3 +67,37 @@ describe Libro do
   end
   
 end
+
+describe Revista do
+  before :all do
+    @revista = Revista.new('Programacion') do
+      autores 'Elsa Eposito'
+      fecha_publicacion 'Marzo 12, 2015'
+      identificador '825-611'
+    end
+  end
+  
+  it "Comprobar que es instancia de Revista" do
+      expect(@libro.instance_of?(Revista)).to eq(true)
+  end
+  
+  it "Comprobar que es hijo de Bibliografia" do
+    expect(@libro.is_a?(Bibliografia)).to eq(true)
+  end
+  
+  it "Comprobar Fecha de Publicacion" do
+    expect(@revista.fecha).to eq('Marzo 12, 2015')
+  end
+  
+  it "Comprobar Autor" do
+    expect(@revista.autor).to eq(['Elsa Eposito'])
+  end
+  
+  it "Comprobar Titulo" do
+    expect(@revista.titulo).to eq('Programacion')
+  end
+  
+  it "Comprobar Identificador" do
+    expect(@revista.issn).to eq('825-611')
+  end
+end
