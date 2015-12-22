@@ -32,7 +32,12 @@ describe Libro do
       identificador '278-553'
     end
   end
-  
+  it "Comprobar que es instancia de Libro" do
+      expect(@libro.instance_of?(Libro)).to eq(true)
+    end
+  it "Comprobar que es hijo de Bibliografia" do
+    expect(@libro.is_a?(Bibliografia)).to eq(true)
+  end
   it "Comprobar Fecha de Publicacion" do
     expect(@libro.fecha).to eq('Junio 21, 2014')
   end
