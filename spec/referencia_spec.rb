@@ -101,3 +101,37 @@ describe Revista do
     expect(@revista.issn).to eq('825-611')
   end
 end
+
+describe Electronico do
+  before :all do
+    @electronico = Electronico.new('¿Como aprender a usar Git?') do
+      autores 'Roberto Miguel Delgado'
+      fecha_publicacion 'Noviembre 18, 2015'
+      direccion_web 'http://CursoGit2015.com'
+    end
+  end
+  
+  it "Comprobar que es instancia de Electronico" do
+      expect(@electronico.instance_of?(Electronico)).to eq(true)
+  end
+  
+  it "Comprobar que es hijo de Bibliografia" do
+    expect(@electronico.is_a?(Bibliografia)).to eq(true)
+  end
+  
+  it "Comprobar Fecha de Publicacion" do
+    expect(@electronico.fecha).to eq('Noviembre 18, 2015')
+  end
+  
+  it "Comprobar Autor" do
+    expect(@electronico.autor).to eq(['Roberto Miguel Delgado'])
+  end
+  
+  it "Comprobar Titulo" do
+    expect(@electronico.titulo).to eq('¿Como aprender a usar Git?')
+  end
+  
+  it "Comprobar Direccion Web" do
+    expect(@electronico.url).to eq('http://CursoGit2015.com')
+  end
+end
