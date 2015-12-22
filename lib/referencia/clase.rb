@@ -4,10 +4,9 @@ class Bibliografia
     
     attr_accessor :autor, :titulo, :fecha
     
-    def initialize(autor, titulo, fecha)
-        @autor = autor
-        @titulo = titulo
-        @fecha = fecha
+    def initialize(titulo, &bloque)
+        self.titulo = titulo
+        instance_eval &bloque if block_given?
     end
     
     def <=> (other)
@@ -16,6 +15,10 @@ class Bibliografia
         else
             @autor <=> other.autor
         end
+    end
+    
+    def fecha_publicacion(fecha)
+        @fecha = fecha
     end
     
 end
@@ -51,15 +54,4 @@ class Electronico < Bibliografia
         super(autor, titulo, fecha)
         @url = url
     end
-end
-
-class APA < Bibliografia
-    
-    attr_accessor :apellidos
-    
-	def initialize(autor,titulo,fecha,apellidos)
-        super(autor, titulo, fecha)
-        @apellidos = apellidos
-	end
-	
 end
