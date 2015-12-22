@@ -71,8 +71,12 @@ class Electronico < Bibliografia
     
     attr_accessor :url
     
-    def initialize(autor, titulo, fecha, url)
-        super(autor, titulo, fecha)
+    def initialize (titulo, &bloque)
+        super(titulo)
+        instance_eval &bloque if block_given?
+    end
+    
+    def direccion_web(url)
         @url = url
     end
 end
