@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
     spec.metadata['allowed_push_host'] = "https://rubygems.org"
   end
 
-  #spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  #spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.summary       = "Short Summary"
   spec.homepage      = "http://rubygems.org/gems/prct11"
   spec.license       = "MIT"
