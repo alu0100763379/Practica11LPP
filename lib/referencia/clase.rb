@@ -21,6 +21,11 @@ class Bibliografia
         @fecha = fecha
     end
     
+    def autores(autor)
+        @autor = []
+        @autor << autor
+    end
+    
 end
 
 class Libro < Bibliografia
