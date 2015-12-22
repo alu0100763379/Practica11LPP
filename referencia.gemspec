@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["alu0100@ull.edu.es"]
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "http://rubygems.org"
+    spec.metadata['allowed_push_host'] = "http://rubygems.org/prct11"
   end
 
   #spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
